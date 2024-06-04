@@ -1,0 +1,49 @@
+import random
+cs=0
+ps=0
+rounds=0
+a=int(input("ENTER THE NUMBER OF ROUNDS YOU WANNA PLAY:"))
+while rounds<a+1:
+    player=input("ENTER YOUR CHOICE:")
+    choices=["rock","paper","scissors"]
+    c=random.choice(choices)
+    print(c)
+    rounds+=1
+    if player==c:
+        print("Tie")
+    elif player=="rock" and c=="paper":
+        print("computer wins")
+        cs+=1
+        print("PLAYER SCORE:",ps)
+        print("COMPUTER SCORE:",cs)
+    elif player=="rock" and c=="scissors":
+        print("player wins")
+        ps+=1
+        print("PLAYER SCORE:",ps)
+        print("COMPUTER SCORE:",cs)
+    elif player=="paper" and c=="rock":
+        print("player wins")
+        ps+=1
+        print("PLAYER SCORE:",ps)
+        print("COMPUTER SCORE:",cs)
+    elif player=="paper" and c=="scissors":
+        print("computer wins")
+        cs+=1
+        print("PLAYER SCORE:",ps)
+        print("COMPUTER SCORE:",cs)
+    elif player=="scissors" and c=="rock":
+        print("computer wins")
+        cs+=1
+        print("PLAYER SCORE:",ps)
+        print("COMPUTER SCORE:",cs)
+    elif player=="scissors" and c=="paper":
+        print("player wins")
+        ps+=1
+        print("PLAYER SCORE:",ps)
+        print("COMPUTER SCORE:",cs)
+if(cs==ps):
+    print("TIE")
+elif(cs>ps):
+    print(cs,"COMPUTER WINS")
+else:
+    print(ps,"PLAYER WINS") 
